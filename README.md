@@ -1,9 +1,18 @@
 # RNN
-Cell classification in pathological images
+This repository provides RNN training scripts for cell classification in pathological images.
 
-## **Input**
+## RNN Training
+Run ``` python RNN_train.py ``` to train the RNN model.  
+Script outputs:
 
+* Train loss and train accuracy every 5 epoches.
+* Test accuracy
 
-pathological images:
-* size: 80 * 80 * 3
-* count: 15000 (5000 per class)
+## Additional Information
+The training data is loaded in the first part of this script.
+
+* The training data
+  * Source: [Quantitative Biomedical Research Center of UT Southwestern](https://qbrc.swmed.edu/projects/cnn/)
+  * Type: Tiles extracted from lung an adenocarcinoma pathological image
+  * Count: 12000(4000 per class)
+  * Size: 80 * 80 * 3
