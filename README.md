@@ -12,7 +12,7 @@ Script outputs:
 The training data is loaded in the first part of this script.
 
 * The training data
-  * Source: [Quantitative Biomedical Research Center of UT Southwestern](https://qbrc.swmed.edu/projects/cnn/)
-  * Type: Tiles extracted from lung an adenocarcinoma pathological image
+  * Source: [Quantitative Biomedical Research Center of UT Southwestern Medical Center](https://qbrc.swmed.edu/projects/cnn/)
+  * Type: Tiles extracted from a lung adenocarcinoma pathological image
   * Count: 12000(4000 per class)
   * Size: 80 * 80 * 3
