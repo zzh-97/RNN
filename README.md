@@ -14,4 +14,4 @@ The training data is loaded in the first part of this script.
   * Source: [Quantitative Biomedical Research Center of UT Southwestern Medical Center](https://qbrc.swmed.edu/projects/cnn/)
   * Type: Tiles extracted from a lung adenocarcinoma pathological image
   * Count: 12000 (4000 per class)
-  * Size: 80 * 80 * 3
+  * Size: 80 X 80 X 3
