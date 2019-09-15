@@ -28,20 +28,21 @@ for i in range(df.shape[0]):
     a=max(df[1][i],df[2][i],df[3][i])
     if a==df[1][i]:
         count+=1
-        label=[1,0,0]
-        img=cv2.imread('zzh'+df[0][i],3)
-        imgs.append(img)
-        labels.append(label)
+        if count<=4000:
+            label=[1,0,0]
+            img=cv2.imread('zzh'+df[0][i],3)
+            imgs.append(img)
+            labels.append(label)
     elif a==df[2][i]:
         count1=count1+1
-        if count1<5000:
+        if count1<=4000:
             label=[0,1,0]
             img=cv2.imread('zzh'+df[0][i],3)
             imgs.append(img)
             labels.append(label)
     else:
         count2=count2+1
-        if count2<5000:
+        if count2<=4000:
             label=[0,0,1]
             img=cv2.imread('zzh'+df[0][i],3)
             imgs.append(img)
@@ -106,7 +107,7 @@ def forward_pro(X,parameters):
     P3=tf.nn.max_pool(A3,ksize=[1,2,2,1],strides=[1,2,2,1],padding='SAME')
     P3=tf.reshape(P3,[-1,10*10*128])
     h1=tf.nn.relu(tf.matmul(P3,W4)+b4)
-    n_drop=tf.nn.dropout(h1,0.8)
+    n_drop=tf.nn.dropout(h1,0.6)
     Z3=tf.matmul(n_drop,W5)+b5
     return Z3
  
